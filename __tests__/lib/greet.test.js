@@ -5,20 +5,25 @@ const faker = require('faker');
 
 
 describe('greet.js', () => {
-  let a = faker.name();
-  let b = 'hello ' + a;
-  let c = 'world';
-  let d = 'hello world';
+  let randomName = faker.name.findName();
+  let array = [3,6,9];
+  let helloName = 'hello ' + randomName;
+  let world = 'world';
+  let helloWorld = 'hello world';
   
-  it('requires input to be a name', () => {
-    let name = greet.sayHello(a);
-    expect(name).toEqual(b);
+  it('requires input to be a random name', () => {
+    let name = greet.sayHello(randomName);
+    expect(name).toEqual(helloName);
   });
 
-  it('requires input to be a name', () => {
-    let name = greet.sayHello(c);
-    expect(name).toEqual(d);
+  it('should display hello world', () => {
+    let name = greet.sayHello(world);
+    expect(name).toEqual(helloWorld);
   });
 
+  it('should show null if not a string', () => {
+    let name = greet.sayHello(array)
+    expect(name).toBeNull();
+  })
 })
 

@@ -15,5 +15,16 @@
     "eslint": "^5.6.1",
     "faker": "^4.1.0",
     "jest": "^23.6.0"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edpuzino/lab-01.git"
+  },
+  "bugs": {
+    "url": "https://github.com/edpuzino/lab-01/issues"
+  },
+  "homepage": "https://github.com/edpuzino/lab-01#readme"
 }
